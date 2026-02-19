@@ -1,0 +1,15 @@
+name = "e2e-v7-test"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+main = "./worker/index.ts"
+
+[assets]
+not_found_handling = "single-page-application"
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "e2e-v7-test-storage"
+
+[vars]
+ENVIRONMENT = "production"
+APP_URL = "https://e2e-v7-test.workers.dev"
